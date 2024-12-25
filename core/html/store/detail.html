@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block content %}
+
+{% if product %}
+
+<div class="left">
+    {% for img in images %}
+        <img src="{{ img.image.url }}" alt="">
+    {% endfor %}
+</div>
+<div class="right">
+    <div class="top"></div>
+    <div class="bottom"></div>
+</div>
+
+{% endif %}
+
+{% endblock %}

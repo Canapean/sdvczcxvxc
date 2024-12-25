@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Store{% endblock %}
+
+{% block content %}
+
+{% if products %}
+
+<ul>
+    {% for product in products %}
+    <li><a href="{% url 'store:detail' product.pk %}"><h4>{{ product.title }}({{ product.external_id }})</h4></a></li>
+    {% endfor%}
+</ul>
+
+{% endif %}
+
+{% endblock %}
